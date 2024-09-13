@@ -6,11 +6,7 @@ const useGithub = () => {
   useEffect(()=>{
     const fetchdata=async ()=>{
         try{
-            const response= await fetch("https://api.github.com/users/02shreyansh",{
-                headers:{
-                    Authorization: `token ${id}`
-                }
-            })
+            const response= await fetch("https://api.github.com/users/02shreyansh")
             const result=await response.json()
             setData(result)
         }catch{
